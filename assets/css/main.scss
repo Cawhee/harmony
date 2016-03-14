@@ -16,6 +16,10 @@
 // Import syntax 
 @import "partials/syntax";
 
+// Import additional fonts
+@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:700); // font-family: 'Old Standard TT', serif;
+@import url(https://fonts.googleapis.com/css?family=Merriweather); // font-family: 'Merriweather', "Helvetica Neue";
+
 
 /* -------------------------------- 
 
@@ -35,7 +39,7 @@ html * {
 body {
   font: {
     size: 100%;
-    family: $primary-font; // variables inside partials > _variables.scss
+    font-family: 'Merriweather', serif;
   }
 }
 
@@ -193,8 +197,7 @@ header.main-header, footer.main-footer {
 }
 
 header.main-header {
-  color: $base-00;
-  border-top: 5px $base-00 solid;
+  font-family: 'Old Standard TT', serif;
 
   h1, h2 { text-align: center; color: inherit;}
   a { 
@@ -475,10 +478,10 @@ body.theme-base-01 {
     @extend .default-anchor;   
   }
 
-  footer.main-footer {
-    background-color: $base-01;
-    color: $base-07;
-  }
+  // footer.main-footer {
+  //   background-color: $base-01;
+  //   color: $base-07;
+  // }
 
   header.main-header {
     color: $base-01;
@@ -504,10 +507,10 @@ header.main-header {
   padding: 1em 0;
   @include MQ(M) { padding: 2em 0; }
 }
-footer.main-footer {
-  padding: 1em 0;
-  @include MQ(M) { padding: 2em 0; }
-}
+// footer.main-footer {
+//   padding: 1em 0;
+//   @include MQ(M) { padding: 2em 0; }
+// }
 .page-content {
   padding: 1em 0;
   @include MQ(M) { padding: 2em 0; }
@@ -520,7 +523,9 @@ footer.main-footer {
 
 ---------------------------------- */
 blockquote {
-  padding: .5em 1em;
+  left: 3em;
+  padding: .5em;
+  padding-left: 2em;
   margin: .8em 0;
   color: #7a7a7a;
   border-left: .25em solid #e5e5e5;
